@@ -1,0 +1,2 @@
+FROM wenbowen123/foundationpose
+RUN find / -xdev \( -name "libcuda.so*" -o -name "libcudadebugger.so*" -o -name "libnvidia-*.so*" -o -name "libnvcuvid.so*" -o -name "libnvoptix.so*" -o -name "libEGL_nvidia.so*" -o -name "libGLX_nvidia.so*" -o -name "libGLESv1_CM_nvidia.so*" -o -name "libGLESv2_nvidia.so*" \) -not -path "*/stubs/*" -delete

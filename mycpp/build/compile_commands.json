@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/FoundationPose/mycpp/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dmycpp_EXPORTS -I/FoundationPose/mycpp/include -isystem /opt/conda/envs/my/include/python3.8 -isystem /usr/local/include/eigen3  -std=c++14 -fopenmp -g3 -O3 -O3 -DNDEBUG -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -o CMakeFiles/mycpp.dir/src/app/pybind_api.cpp.o -c /FoundationPose/mycpp/src/app/pybind_api.cpp",
+  "file": "/FoundationPose/mycpp/src/app/pybind_api.cpp"
+},
+{
+  "directory": "/FoundationPose/mycpp/build",
+  "command": "/usr/bin/c++ -DBOOST_ALL_NO_LIB -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -Dmycpp_EXPORTS -I/FoundationPose/mycpp/include -isystem /opt/conda/envs/my/include/python3.8 -isystem /usr/local/include/eigen3  -std=c++14 -fopenmp -g3 -O3 -O3 -DNDEBUG -fPIC -fvisibility=hidden -flto -fno-fat-lto-objects -o CMakeFiles/mycpp.dir/src/Utils.cpp.o -c /FoundationPose/mycpp/src/Utils.cpp",
+  "file": "/FoundationPose/mycpp/src/Utils.cpp"
+}
+]
