@@ -112,34 +112,15 @@ Combined (WITH DR)         |     2.19 |      0.58 |     24.82 |      1.62 |     
 ====================================================================================================================
 
 ----------------------------------------------------------------------------------------------------
-5. KEY FINDINGS & SCIENTIFIC CONCLUSIONS
-----------------------------------------------------------------------------------------------------
-1. Baseline Neural Robustness:
-   - On clean uncorrupted data, FoundationPose exhibits sub-millimeter precision (Mean ADD = 2.6 mm).
-   - The learned transformer/convolutional features are remarkably invariant to moderate photometric 
-     distortions (motion blur, sensor noise, and low lighting), maintaining 100% Recall@0.1d without extra refinement.
-
-2. Impact of Heavy Occlusion:
-   - When 40% of the object is obscured, neural matching degrades sharply: Mean ADD rises from 0.26 cm to 4.81 cm, 
-     and Recall@0.1d drops by half (from 100% down to 50%).
-
-3. Benefits of Differentiable Rendering:
-   - Under combined corruptions (simultaneous severe occlusion and motion blur), Differentiable Rendering 
-     successfully recovers fine geometric alignment, improving strict Recall@0.05d (<1.29 cm) from 66.7% to 75.0% 
-     (+8.3% recovery).
-   - On moderately misaligned individual frames, differentiable rendering reduced ADD error by over 1.0 cm.
-
-4. Hybrid Integration Insight:
-   - Because raw pixel losses can slightly drift on pure sensor noise when an initial neural pose is already 
-     sub-centimeter, Differentiable Rendering is most effective as a selective secondary refinement stage: 
-     triggered dynamically when neural confidence scores drop or occlusion is detected.
-
-----------------------------------------------------------------------------------------------------
-6. HOW TO RUN THE EVALUATION
+5. HOW TO RUN THE EVALUATION
 ----------------------------------------------------------------------------------------------------
 Execute within the official Docker container:
     docker run --gpus all --rm \
         -v "/path/to/FoundationPose:/workspace/FoundationPose" \
         -w /workspace/FoundationPose \
         foundationpose python run_evaluation_pipeline.py
-====================================================================================================
+
+----------------------------------------------------------------------------------------------------
+6. CONCLUSION
+----------------------------------------------------------------------------------------------------
+tbd
